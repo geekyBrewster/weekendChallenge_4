@@ -14,8 +14,13 @@
         <h1>A Gallery of My Life</h1>
       <div ng-repeat="image in gallery.images">
         <div class="imageContainer">
-          <p>{{ image.name }}</p>
-          <img ng-src="images/{{ image.source }}" alt="">
+          <h3>{{ image.name }}</h3>
+          <div class="image" ng-click="gallery.toggle(image)">
+            <img ng-show="image.visibility" ng-src="images/{{ image.source }}" alt="">
+          </div>
+          <div class="message" ng-click="gallery.toggle(image)">
+            <p ng-show="!image.visibility">{{ image.message }}</p>
+          </div>
           <button type="button">Click to Like</button>
         </div>
       </div>

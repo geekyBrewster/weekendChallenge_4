@@ -8,7 +8,7 @@ div {
 }
 
 img {
-  width: 300px;
+  width: 250px;
 }
 
 h1 {
@@ -21,4 +21,10 @@ h1 {
 
 button {
   margin: 10px 10px;
+}
+
+.message {
+  border: 1px solid blue;
+  width: 300px;
+  padding: 5px 5px;
 }
