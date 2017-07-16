@@ -3,11 +3,22 @@ body {
 }
 
 div {
-  height: 200px;
   border: 1px dashed purple;
-  margin: 0 auto;
+  float: left;
 }
 
 img {
-  width: 200px;
+  width: 300px;
+}
+
+h1 {
+  background-color: pink;
+}
+
+.imageContainer {
+  width: 300px;
+}
+
+button {
+  margin: 10px 10px;
 }
