@@ -16,8 +16,8 @@
 - [ ] The gallery is hosted on Heroku
 
 **Hard**
-- [ ] The gallery is styled using Bootstrap & is responsive
-- [ ] A view counter is tracking / displaying how many times and image was clicked on
+- [x] The gallery is styled using Bootstrap & is responsive
+- [x] A view counter is tracking / displaying how many times an image was clicked on
 
 **Pro**
 - [ ] Below each image, there is a form that will accept user comments

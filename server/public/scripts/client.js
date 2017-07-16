@@ -8,9 +8,15 @@ galleryApp.controller('GalleryController', function(){
   console.log(gallery.images);
 
   gallery.toggle = function(image) {
-    console.log(image);
+    console.log("count before: ", image.count);
     image.visibility = !image.visibility;
-    console.log(image.visibility);
+    // only count image view once when toggling from image to description and back
+    if(image.visibility == true){
+      image.count = image.count + 1;
+    } else {
+      image.count = image.count;
+    }
+    console.log("count after:", image.count);
   };
 
 

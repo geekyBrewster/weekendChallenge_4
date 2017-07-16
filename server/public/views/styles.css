@@ -14,16 +14,18 @@ img {
 }
 
 h1 {
-  font-family: 'Cinzel', serif;
+  font-family: 'Crimson Text', serif;
   font-weight: 700;
   text-align: center;
   text-shadow: 2px 2px 2px black;
+  letter-spacing: 0.1em;
 }
 
 h3 {
-  font-family: 'Cinzel', serif;
+  font-family: 'Crimson Text', serif;
   text-align: center;
   color: lightCyan;
+  letter-spacing: 0.1em;
 }
 
 p {
@@ -32,7 +34,11 @@ p {
 }
 
 button {
-  margin: 10px 10px;
+  margin: 0px 10px;
+}
+
+span {
+  margin-top: 50px;
 }
 
 .imageContainer {
@@ -62,5 +68,10 @@ button {
 
 #likeCount {
   font-size: 2.0em;
+  padding-top: 5px;
+}
+
+#viewCount {
+  color: #C1E8F5;
   padding-top: 5px;
 }
