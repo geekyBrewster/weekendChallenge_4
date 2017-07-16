@@ -12,31 +12,15 @@
   <body ng-app="galleryApp">
     <div class="container" ng-controller="GalleryController as gallery">
         <h1>A Gallery of My Life</h1>
-      <div class="imageContainer">
-        <img ng-src="images/minneapolis.jpg" alt="">
-        <button type="button">Click to Like</button>
+      <div ng-repeat="image in gallery.images">
+        <div class="imageContainer">
+          <p>{{ image.name }}</p>
+          <img ng-src="images/{{ image.source }}" alt="">
+          <button type="button">Click to Like</button>
+        </div>
       </div>
-      <div class="imageContainer">
-        <img ng-src="images/beerFrisbee.jpg" alt="">
-        <button type="button">Click to Like</button>
-      </div>
-      <div class="imageContainer">
-        <img ng-src="images/stanLee.jpg" alt="">
-        <button type="button">Click to Like</button>
-      </div>
-      <div class="imageContainer">
-        <img ng-src="images/tokyoTower.jpg" alt="">
-        <button type="button">Click to Like</button>
-      </div>
-      <div class="imageContainer">
-        <img ng-src="images/lefse.jpg" alt="">
-        <button type="button">Click to Like</button>
-      </div>
-      <div class="imageContainer">
-        <img ng-src="images/superCat.jpg" alt="">
-        <button type="button">Click to Like</button>
-      </div>
-    </div>
+
+    </div> <!-- end of container / gallery -->
 
   </body>
 </html>
