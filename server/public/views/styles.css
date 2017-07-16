@@ -1,9 +1,11 @@
 body {
+  background: linear-gradient(45deg, #283048, #859398);
   background-color: #ccc;
+  font-family: 'Bellefair', serif;
+  color: #fff;
 }
 
 div {
-  border: 1px dashed purple;
   float: left;
 }
 
@@ -12,25 +14,53 @@ img {
 }
 
 h1 {
-  background-color: pink;
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 2px 2px 2px black;
 }
 
-.imageContainer {
-  width: 300px;
+h3 {
+  font-family: 'Cinzel', serif;
+  text-align: center;
+  color: lightCyan;
+}
+
+p {
+  font-size: 1.3em;
+  text-align: center;
 }
 
 button {
   margin: 10px 10px;
 }
 
-.message {
-  border: 1px solid blue;
-  /*height: 300px;
-  width: 300px;*/
-  padding: 5px 5px;
+.imageContainer {
+  width: 300px;
+  margin-bottom: 20px;
 }
 
-.messageDisplay {
+.image {
+  margin-bottom: 10px;
+}
+
+.container {
+  /*border: 1px green solid;*/
+  margin: 0 auto;
+}
+
+.message {
   height: 300px;
   width: 300px;
+  background-color: rgba(156,156,156,0.5);
+  border: 2px solid #708090;
+  border-radius: 5px;
+  padding: 10px 10px;
+  margin-bottom: 10px;
+
+}
+
+#likeCount {
+  font-size: 2.0em;
+  padding-top: 5px;
 }

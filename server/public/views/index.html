@@ -4,26 +4,29 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>A Gallery of My Life</title>
+    <link href="https://fonts.googleapis.com/css?family=Bellefair|Cinzel:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="views/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js" charset="utf-8"></script>
+    <script src="scripts/imageData.js" charset="utf-8"></script>
     <script src="scripts/client.js" charset="utf-8"></script>
   </head>
   <body ng-app="galleryApp">
     <div class="container" ng-controller="GalleryController as gallery">
         <h1>A Gallery of My Life</h1>
-      <div ng-repeat="image in gallery.images">
+      <div class="col-md-4" ng-repeat="image in gallery.images">
         <div class="imageContainer">
           <div class="image" ng-click="gallery.toggle(image)">
-            <img ng-show="image.visibility" ng-src="images/{{ image.source }}" alt="">
+            <img class="img-thumbnail" ng-show="image.visibility" ng-src="images/{{ image.source }}" alt="">
           </div>
-          <div class="message" ng-click="gallery.toggle(image)">
-            <h3 ng-show="!image.visibility">{{ image.name }}</h3>
-            <p ng-show="!image.visibility">{{ image.message }}</p>
+          <div class="message" ng-show="!image.visibility" ng-click="gallery.toggle(image)">
+            <h3>{{ image.name }}</h3>
+            <p>{{ image.message }}</p>
           </div>
           <div class="counter">
-            <button type="button" ng-show="image.visibility" ng-click="count = count + 1" ng-init="count=0">Click to Like</button>
-            <p>This images had been liked: {{ count }} times.</p>
+            <button class="btn btn-info" ng-click="count = count + 1" ng-init="count=0"><i class="fa fa-heart fa-2x" aria-hidden="true"></i></button>
+            <span id="likeCount" class="text-center"> {{ count }} likes</span>
           </div>
 
         </div>
